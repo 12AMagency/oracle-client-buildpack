@@ -18,7 +18,7 @@ unzip instantclient-basic-linux.x64-23.26.0.0.0.zip && rm instantclient-basic-li
 unzip instantclient-sdk-linux.x64-23.26.0.0.0.zip && rm instantclient-sdk-linux.x64-23.26.0.0.0.zip
 mv instantclient{_23_26,}
 cd instantclient
-
+ln -s $BUILD_DIR/.apt/usr/lib/x86_64-linux-gnu/libaio.so.1t64 libaio.so.1
 
 cat <<EOT > $BP_DIR/export
 export LD_LIBRARY_PATH=$CLIENT_BUILD_DIR/instantclient/:$BUILD_DIR/.apt/lib/x86_64-linux-gnu/${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}
