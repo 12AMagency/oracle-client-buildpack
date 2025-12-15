@@ -18,8 +18,7 @@ unzip instantclient-basic-linux.x64-23.26.0.0.0.zip && rm instantclient-basic-li
 unzip instantclient-sdk-linux.x64-23.26.0.0.0.zip && rm instantclient-sdk-linux.x64-23.26.0.0.0.zip
 mv instantclient{_23_26,}
 cd instantclient
-ln -s libclntsh.so.23.26 libclntsh.so
-ln -s libocci.so.23.26 libocci.so
+
 
 cat <<EOT > $BP_DIR/export
 export LD_LIBRARY_PATH=$CLIENT_BUILD_DIR/instantclient/:$BUILD_DIR/.apt/lib/x86_64-linux-gnu/${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}
